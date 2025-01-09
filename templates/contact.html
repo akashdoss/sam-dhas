@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/history">Order History</a>
+        <a href="/menu">Menu</a>
+    </nav>
+
+    <div class="contact-info">
+        <h2>How to Reach Us</h2>
+        <p>Room Service Hours: 24/7</p>
+        <p>Direct Line: Dial 0 from your room phone</p>
+        <p>Email: roomservice@hotel.com</p>
+        <p>Emergency: Dial 911</p>
+    </div>
+
+    <form action="#" method="POST" class="contact-form">
+        <div class="form-group">
+            <label for="room">Room Number*</label>
+            <input type="text" id="room" name="room" required>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Guest Name*</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category*</label>
+            <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="complaint">Complaint</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="inquiry">General Inquiry</option>
+                <option value="appreciation">Appreciation</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="feedback">Your Message*</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" 
+                      placeholder="Please share your thoughts with us..." required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="rating">Rate Your Experience</label>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">★</label>
+            </div>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>
