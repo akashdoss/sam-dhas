@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Service</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Room Service Ordering System</h1>
+    <form action="/order" method="POST">
+        <label for="service">Choose a service:</label>
+        <select id="service" name="service" required>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Cleaning">Cleaning</option>
+        </select>
+        <button type="submit">Place Order</button>
+    </form>
+
+    <h2>Order History</h2>
+    <ul>
+        {% for order in orders %}
+        <li>
+            <div>
+                <strong>{{ order.service }}</strong><br>
+                <small>Ordered at {{ order.timestamp }}</small>
+            </div>
+            <form action="/cancel" method="POST">
+                <input type="hidden" name="order" value="{{ order.service }}">
+                <button type="submit">Cancel</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
