@@ -8,6 +8,14 @@
 </head>
 <body>
     <h1>Room Service Ordering System</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/history">History</a>
+        <a href="/menu">Menu</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
     <form action="/order" method="POST">
         <label for="service">Choose a service:</label>
         <select id="service" name="service" required>
@@ -18,21 +26,5 @@
         </select>
         <button type="submit">Place Order</button>
     </form>
-
-    <h2>Order History</h2>
-    <ul>
-        {% for order in orders %}
-        <li>
-            <div>
-                <strong>{{ order.service }}</strong><br>
-                <small>Ordered at {{ order.timestamp }}</small>
-            </div>
-            <form action="/cancel" method="POST">
-                <input type="hidden" name="order" value="{{ order.service }}">
-                <button type="submit">Cancel</button>
-            </form>
-        </li>
-        {% endfor %}
-    </ul>
 </body>
 </html>
