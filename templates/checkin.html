@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Hotel Check-in</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/history">Order History</a>
+        <a href="/menu">Menu</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <form action="/checkin" method="POST" class="check-in-form">
+        <div class="form-group">
+            <label for="guest_name">Full Name*</label>
+            <input type="text" id="guest_name" name="guest_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="arrival_date">Check-in Date*</label>
+            <input type="date" id="arrival_date" name="arrival_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="departure_date">Expected Check-out Date*</label>
+            <input type="date" id="departure_date" name="departure_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="room_preference">Room Preference</label>
+            <select id="room_preference" name="room_preference">
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+                <option value="deluxe">Deluxe Room</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="special_requests">Special Requests</label>
+            <textarea id="special_requests" name="special_requests" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Complete Check-in</button>
+    </form>
+</body>
+</html>
