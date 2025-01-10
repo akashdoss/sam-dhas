@@ -9,13 +9,6 @@
 <body>
     <h1>Room Service Ordering System</h1>
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="/history">History</a>
-        <a href="/menu">Menu</a>
-        <a href="/contact">Contact</a>
-    </nav>
-
     <form action="/order" method="POST">
         <label for="service">Choose a service:</label>
         <select id="service" name="service" required>
@@ -26,5 +19,14 @@
         </select>
         <button type="submit">Place Order</button>
     </form>
+    
+    <nav>
+        <a href="/">Home</a>
+        <a href="/checkin">Check-in</a>
+        <a href="/checkout">Check-out</a>
+        <a href="/history">History</a>
+        <a href="/menu">Menu</a>
+        <a href="/contact">Contact</a>
+    </nav>
 </body>
 </html>
