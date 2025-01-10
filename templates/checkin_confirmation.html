@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-in Confirmation</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>Check-in Successful! 🎉</h1>
+        
+        <div class="confirmation-message">
+            <p>Welcome, {{ confirmation.guest_name }}!</p>
+            <p>Your room number is: <strong>{{ confirmation.room_number }}</strong></p>
+            <p>We hope you enjoy your stay with us ✨</p>
+        </div>
+
+        <div class="additional-info">
+            <h2>Important Information</h2>
+            <ul>
+                <li>Room service is available 24/7</li>
+                <li>Dial 0 for front desk assistance</li>
+                <li>Free Wi-Fi password: Available at reception</li>
+                <li>Breakfast hours: 7 AM - 10 AM</li>
+            </ul>
+        </div>
+
+        <div class="return-options">
+            <a href="/" class="return-btn">Go to Home</a>
+            <a href="/menu" class="return-btn">View Room Service Menu</a>
+        </div>
+    </div>
+</body>
+</html>
