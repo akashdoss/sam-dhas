@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-out</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Hotel Check-out</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/history">Order History</a>
+        <a href="/menu">Menu</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <div class="checkout-container">
+        <form action="/checkout" method="POST" class="checkout-form">
+            <div class="form-group">
+                <label for="room_number">Room Number*</label>
+                <input type="text" id="room_number" name="room_number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guest_name">Guest Name*</label>
+                <input type="text" id="guest_name" name="guest_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="checkout_date">Check-out Date*</label>
+                <input type="date" id="checkout_date" name="checkout_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="payment_method">Payment Method*</label>
+                <select id="payment_method" name="payment_method" required>
+                    <option value="">Select payment method</option>
+                    <option value="credit_card">Credit Card</option>
+                    <option value="debit_card">Debit Card</option>
+                    <option value="cash">Cash</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback">Feedback About Your Stay</label>
+                <textarea id="feedback" name="feedback" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Room Condition</label>
+                <div class="rating">
+                    <input type="radio" id="star5" name="room_rating" value="5">
+                    <label for="star5">★</label>
+                    <input type="radio" id="star4" name="room_rating" value="4">
+                    <label for="star4">★</label>
+                    <input type="radio" id="star3" name="room_rating" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" id="star2" name="room_rating" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" id="star1" name="room_rating" value="1">
+                    <label for="star1">★</label>
+                </div>
+            </div>
+
+            <button type="submit">Complete Check-out</button>
+        </form>
+    </div>
+</body>
+</html>
